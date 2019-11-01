@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+#TODO: figure out why I need this here and in bootstrap.yml
+spring:
+  application:
+    name: testLatticeApp
+  data:
+    mongodb:
+      authentication-database: admin
+      host: factura
+      port: 27017
+      username: root
+      password: example
+      database: rest_tutorial    
+
+ribbon:
+  ServerListRefreshInterval: 1000
+
+endpoints:
+  health:
+    sensitive: false
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
